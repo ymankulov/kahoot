@@ -1,15 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route, Routes} from "react-router-dom";
+import Section from "./components/Section";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
+import Admin from "./components/Pages/admin";
+
 
 function App() {
-  return (
-    <div className="App">
-        <Header/>
-        <Hero/>
-    </div>
-  );
+    return (
+        <div>
+            <Header/>
+            <Routes>
+                <Route path="/" element={<Section/>}/>
+                <Route path="/connect" element={<Admin/>}/>
+            </Routes>
+        </div>
+    );
+
 }
 
 export default App;

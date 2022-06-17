@@ -1,22 +1,24 @@
 import React from 'react';
 import Motion from '../img/image 5.svg'
 import Rus from '../img/rus.svg'
-import '../css/Header.css'
-
 
 
 const Header = () => {
+    const header = {
+        background: "#001355",
+        boxShadow: "0 0 10px 0 gray"
+    }
+
+
     return (
-        <div className='container header'>
-            <div className=' flex justify-between flex-wrap items-center mx-auto ' style={{
-                background: '#001355'
-            }}>
-                <div className='flex  items-center justify-between flex-wrap text-white text-2xl ml-20'>
+        <div className='container'>
+            <div style={header} className='flex justify-between p-5'>
+                <div className='flex  justify-between flex-wrap text-white mx-20'>
                     <img src={Motion} alt=""/>
-                    <h3>MOTION <br/>TEST</h3>
+                    <h3 style={{margin: "auto"}}>MOTION <br/>TEST</h3>
                 </div>
                 <div>
-                    <button className=' mr-20 bg-purple-800 flex flex-wrap justify-between items-center rounded-full m-3 h-10 text-xs text-white'>
+                    <button className='bg-purple-800 flex flex-wrap justify-between items-center rounded-3xl m-3 p-3  mx-20 text-white'>
                         <img src={Rus} alt=""/>
                         <h4>рус</h4>
                     </button>
